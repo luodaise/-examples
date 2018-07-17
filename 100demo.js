@@ -19,3 +19,63 @@ function cutstr(str, len) {
     }
     return strre + "..."
 }
+
+//原生JavaScript获取域名主机
+function getHost(url) {
+    var host = "null";
+    if(typeof url == "undefined"|| null == url) {
+        url = window.location.href;
+    }
+    var regex = /^\w+\:\/\/([^\/]*).*/;
+    var match = url.match(regex);
+    if(typeof match != "undefined" && null != match) {
+        host = match[1];
+    }
+    return host;
+}
+
+
+//原生JavaScript清除空格
+String.prototype.trim = function() {
+    var reExtraSpace = /^\s*(.*?)\s+$/;
+    return this.replace(reExtraSpace, "$1")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
